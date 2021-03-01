@@ -10,10 +10,12 @@ public class Weapons : MonoBehaviour
     private bool milkFlag;
     private Animator myanim;
     private Character character;
+    private CharacterController characterController;
     public int nowActive;
     private void Awake() {
         myanim = GetComponent<Animator>();
         character = GetComponent<Character>();
+        characterController = GetComponent<CharacterController>();
         disurm();
     }
     public void picupWeapon(int number,int ammoCount){
@@ -24,6 +26,7 @@ public class Weapons : MonoBehaviour
         myanim.SetBool("PicupWeapon",true);
         character.shootweapons = weapons[number].GetComponent<ShootWeapon>();
         character.shootweapons.ammoCount = ammoCount;
+        character.shootweapons.photonView = characterController.photonView;
     }
 
     public void disurm(){

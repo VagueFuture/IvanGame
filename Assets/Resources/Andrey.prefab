@@ -666,8 +666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 4106789601157648451}
-  - {fileID: 4106789601171373593}
+  - {fileID: 7606594194298406722}
+  - {fileID: 169355472463276487}
   milk: {fileID: 1963122040}
   countMilk: 0
   nowActive: 0
@@ -683,6 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25011012fb3cef749a1ee705ac645d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 0}
   weapons: {fileID: 0}
   shoot: 0
   handattacs: 0
@@ -780,6 +781,7 @@ MonoBehaviour:
   helth: 100
   dead: 0
   respawnDelay: 3
+  photonView: {fileID: 0}
 --- !u!114 &5299382959655511956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,8 +1353,8 @@ Transform:
   m_LocalPosition: {x: 1.0050168, y: 0.0000003340946, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4106789601171373542}
-  - {fileID: 4106789601157649237}
+  - {fileID: 1556061807338160634}
+  - {fileID: 782072304720399816}
   m_Father: {fileID: 2467478922190278718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2054,13 +2056,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3846da7bbfbadd54094a6707d191f617, type: 3}
---- !u!4 &4106789601157649237 stripped
+--- !u!4 &782072304720399816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3613089750359137292, guid: 3846da7bbfbadd54094a6707d191f617,
     type: 3}
   m_PrefabInstance: {fileID: 4106789601157648836}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4106789601157648451 stripped
+--- !u!1 &7606594194298406722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5867682874646435462, guid: 3846da7bbfbadd54094a6707d191f617,
     type: 3}
@@ -2150,13 +2152,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09f2f230fa6e2149807a329c6006147, type: 3}
---- !u!4 &4106789601171373542 stripped
+--- !u!4 &1556061807338160634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3271305040247651989, guid: a09f2f230fa6e2149807a329c6006147,
     type: 3}
   m_PrefabInstance: {fileID: 4106789601171373935}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4106789601171373593 stripped
+--- !u!1 &169355472463276487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4226510076844136104, guid: a09f2f230fa6e2149807a329c6006147,
     type: 3}

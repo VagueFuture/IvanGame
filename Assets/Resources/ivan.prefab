@@ -108,6 +108,7 @@ MonoBehaviour:
   shootgun: 0
   ammoCount: 0
   dmg: 35
+  photonView: {fileID: 0}
   network: 1
 --- !u!1 &607942757
 GameObject:
@@ -243,6 +244,7 @@ MonoBehaviour:
   shootgun: 0
   ammoCount: 0
   dmg: 10
+  photonView: {fileID: 0}
   network: 1
 --- !u!1 &1319643732
 GameObject:
@@ -946,6 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25011012fb3cef749a1ee705ac645d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 0}
   weapons: {fileID: 0}
   shoot: 0
   handattacs: 0
@@ -964,6 +967,7 @@ MonoBehaviour:
   helth: 100
   dead: 0
   respawnDelay: 3
+  photonView: {fileID: 0}
 --- !u!114 &2473474388374574062
 MonoBehaviour:
   m_ObjectHideFlags: 0

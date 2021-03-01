@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     private Character character;
 
-    private PhotonView photonView;
+    public PhotonView photonView;
     private Helth_settings helth_settings;
     private Ui_Settings ui_Settings;
     private HandHits handHits;
@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         character = GetComponent<Character>();
         helth_settings = GetComponent<Helth_settings>();
+        helth_settings.photonView = photonView;
         weapons = GetComponent<Weapons>();
         handHits = GetComponent<HandHits>();
         ui_Settings = GameObject.Find("Ui_settings").GetComponent<Ui_Settings>();
@@ -90,4 +91,13 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    [PunRPC]
+    public void Fire(){
+        character.shootweapons.Fire();
+    }
+
+    [PunRPC]
+    public void Dead(){
+        helth_settings.Dead();
+    }
 }

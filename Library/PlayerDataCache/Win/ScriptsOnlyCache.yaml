@@ -46,8 +46,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -512,7 +514,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: d03a990c34443b07a69537152fc137b4
+      Hash: aeb9cec9a00c3986b3fd96a981526585
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterController
@@ -1094,7 +1096,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 9253f3b0e40cb10b35002ae01610d2f1
+      Hash: 4bdb5bdd4dd37d4eab85eb9a59f740c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Helth_settings
@@ -1136,7 +1138,7 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: 1eeb4b5b66b3b7e5cf24c0600c4e244d
+      Hash: e5df177c7c25fd085322630d7c85edba
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShootWeapon

@@ -10,6 +10,14 @@ public class Character : MonoBehaviour
     private bool onMoving, onMakeJump;
     public float buffSpeed = 0;
 
+    [Range(0, 10)]
+    public float moveSpeed = 5;
+    [Range(0, 20)]
+    public float jumpForce = 10;
+ 
+    private Rigidbody2D objBody;
+    private BoxCollider2D objCollider;
+
     private void Awake() {
         myanim = GetComponent<Animator>();   
     }
@@ -39,8 +47,6 @@ public class Character : MonoBehaviour
         }
     }
 
-    private BoxCollider2D objCollider;
- 
     public new BoxCollider2D collider {
     get {
         if (this.objCollider == null) this.objCollider = GetComponent<BoxCollider2D>();
@@ -61,7 +67,7 @@ public class Character : MonoBehaviour
     Bounds bounds = this.collider.bounds;
     Vector2 point = bounds.center;
     Vector2 size = bounds.size;
-    bool result = Physics2D.OverlapBox(point,new Vector2(size.x+0.15f,size.y-0.1f), 0.2f, 1 << 8);
+    bool result = Physics2D.OverlapBox(point,new Vector2(size.x,size.y-0.2f), 0f, 1 << 8);
     if(!result){
         napWall = directionRight;
     }else{
@@ -71,13 +77,6 @@ public class Character : MonoBehaviour
     
     return result;
     }
-
-    [Range(0, 10)]
-    public float moveSpeed = 5;
-    [Range(0, 20)]
-    public float jumpForce = 10;
- 
-    private Rigidbody2D objBody;
 
  
     public Rigidbody2D body {

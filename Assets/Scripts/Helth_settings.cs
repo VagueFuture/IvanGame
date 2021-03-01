@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 
 public class Helth_settings : MonoBehaviour
 {
     public float helth = 100;
     public bool dead = false;
     public float respawnDelay;
-
+    public PhotonView photonView;
     private float nowHp;
 
 
@@ -17,7 +17,8 @@ public class Helth_settings : MonoBehaviour
         { 
             nowHp = helth;
             if(helth<=0)
-                Dead();
+                photonView.RPC("Dead",RpcTarget.AllViaServer);
+                //Dead();
         }
         
     }

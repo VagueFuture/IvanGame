@@ -18,10 +18,8 @@ public class Bullet : MonoBehaviour
         Object.Destroy(this.gameObject);
     }
 
-
     private void OnTriggerEnter2D(Collider2D other) {
         Helth_settings helth = other.GetComponent<Helth_settings>();
-
         if(helth!=null){
             helth.helth -= damage;
             Object.Destroy(this.gameObject);

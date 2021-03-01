@@ -58,10 +58,10 @@
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
  <Reference Include="UnityEditor.UI">
- <HintPath>F:/Program Files/Unity/Prog/IvanGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>F:/GitHubReps/IvanGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/Program Files/Unity/Prog/IvanGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/GitHubReps/IvanGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Unity/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -253,10 +253,10 @@
  <HintPath>D:/Unity/2019.3.3f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>F:/Program Files/Unity/Prog/IvanGame/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>F:/GitHubReps/IvanGame/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>F:/Program Files/Unity/Prog/IvanGame/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>F:/GitHubReps/IvanGame/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Unity/2019.3.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
