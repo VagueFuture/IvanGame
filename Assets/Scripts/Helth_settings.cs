@@ -11,6 +11,8 @@ public class Helth_settings : MonoBehaviour
     public PhotonView photonView;
     private float nowHp;
 
+    public string lasthitMePlayer = "";
+
 
     private void Update() {
         if(nowHp != helth)

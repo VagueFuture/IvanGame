@@ -31,7 +31,7 @@ public class ShootWeapon : MonoBehaviour
     public void StopShoot(){
     }
 
-    public void Fire(){
+    public void Fire(string owner){
         int xVelocity = 1;
         if(transform.lossyScale.x < 0)
             xVelocity = -1;
@@ -45,6 +45,7 @@ public class ShootWeapon : MonoBehaviour
            // else
             //    flyBullet = PhotonNetwork.Instantiate(bullet.name,barrel.position,Quaternion.identity);  
             flyBullet.GetComponent<Bullet>().damage = dmg;
+            flyBullet.GetComponent<Bullet>().owner = owner;
             flyBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xVelocity*shootSpeed, barrel.localRotation.z*20);
             }
         ammoCount--;

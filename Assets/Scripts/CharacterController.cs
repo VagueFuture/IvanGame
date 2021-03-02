@@ -92,8 +92,8 @@ public class CharacterController : MonoBehaviour
     }
 
     [PunRPC]
-    public void Fire(){
-        character.shootweapons.Fire();
+    public void Fire(PhotonMessageInfo info){
+        character.shootweapons.Fire(info.photonView.Owner.NickName);
     }
 
     [PunRPC]

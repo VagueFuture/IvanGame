@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float liveTime;
     public float damage = 10;
     public float timer = 0;
-    public float owner;
+    public string owner;
    private void Awake() {
        StartCoroutine(HideBulet());
    }
