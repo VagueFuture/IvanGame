@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
         Helth_settings helth = other.GetComponent<Helth_settings>();
         if(helth!=null){
             helth.helth -= damage;
+            helth.lasthitMePlayer = owner;
             Object.Destroy(this.gameObject);
         } 
         

@@ -9,7 +9,7 @@ public class Ui_Settings : MonoBehaviour
     public Text ammo_Text;
     public Image helthBar;
     public Text LDInfo;
-
+    private int collums = 0;
     private void Awake() {
         if(instance = null)
             instance = this;
@@ -23,6 +23,12 @@ public class Ui_Settings : MonoBehaviour
     }
 
     public void LogKD(string info){
-        LDInfo.text = info;
+        if(collums>3)
+        {
+            LDInfo.text = "";
+            collums = 0;
+        }
+        collums++;
+        LDInfo.text += info+"\n";
     }
 }

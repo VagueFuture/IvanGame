@@ -98,6 +98,7 @@ public class CharacterController : MonoBehaviour
 
     [PunRPC]
     public void Dead(){
+        ui_Settings.LogKD(helth_settings.lasthitMePlayer + "-> Kill ->"+ photonView.Owner.NickName);
         helth_settings.Dead();
     }
 }

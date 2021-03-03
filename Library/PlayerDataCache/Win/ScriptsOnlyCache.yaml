@@ -1094,7 +1094,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 4bdb5bdd4dd37d4eab85eb9a59f740c8
+      Hash: 4fc946ac4d5cb83b1cbea4dbe9ded078
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Helth_settings
@@ -1274,7 +1274,7 @@ ScriptsOnlyBuild:
     className: Asteroid
   - hash:
       serializedVersion: 2
-      Hash: 0be04c7fc743b1ed5780a01553d4dcfb
+      Hash: 18bbb3412c994e5316da4cc88fd494a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ui_Settings
@@ -1544,7 +1544,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 6ab4f868e54378287d178301b08bd68a
+      Hash: da12048b08c72fc6e0b7fc07f9de4508
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet

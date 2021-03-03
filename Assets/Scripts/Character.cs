@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    const bool left = false;
+    const bool right = true;
     public Animator myanim;
     public ShootWeapon shootweapons;
-    private bool directionRight = true,napWall;
+    private bool direction = right,napWall;
     private bool onMoving, onMakeJump;
     public float buffSpeed = 0;
 
@@ -30,11 +32,12 @@ public class Character : MonoBehaviour
    // print("Выполнить действие: " + action);
     if (action == ActionType.MoveRight) 
     {
-        this.onMoving = this.directionRight = true;
+        this.direction= right;
+        this.onMoving = true;
     } else 
         if (action == ActionType.MoveLeft) 
         {
-            this.directionRight = false;
+            this.direction = left;
             this.onMoving = true;
         }
     else if (action == ActionType.None) 
@@ -69,9 +72,9 @@ public class Character : MonoBehaviour
     Vector2 size = bounds.size;
     bool result = Physics2D.OverlapBox(point,new Vector2(size.x,size.y-0.2f), 0f, 1 << 8);
     if(!result){
-        napWall = directionRight;
+        napWall = direction;
     }else{
-        if(napWall != directionRight)
+        if(napWall != direction)
             result = false;
     }
     
@@ -90,7 +93,7 @@ public class Character : MonoBehaviour
     if (this.onMoving && !CheckWall()) {  
         float xVelocity, yVelocity;
 
-        if (this.directionRight) xVelocity = 1f;
+        if (this.direction) xVelocity = 1f;
             else xVelocity = -1f;
 
         transform.localScale = new Vector2(transform.localScale.y*-xVelocity,transform.localScale.y);

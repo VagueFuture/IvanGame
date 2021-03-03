@@ -968,6 +968,7 @@ MonoBehaviour:
   dead: 0
   respawnDelay: 3
   photonView: {fileID: 0}
+  lasthitMePlayer: 
 --- !u!114 &2473474388374574062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,9 +987,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 6565035115887907195}
   - {fileID: -3267256496697153458}
-  - {fileID: -5993113166015199315}
+  - {fileID: -2602966968496901390}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
