@@ -122,5 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itsWeapon: 1
+  itsHeal: 0
   ammoCount: 30
   number: 1

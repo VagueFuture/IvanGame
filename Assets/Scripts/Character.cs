@@ -58,11 +58,16 @@ public class Character : MonoBehaviour
     }
 
     private bool CheckGround() {
-    Bounds bounds = this.collider.bounds;
-    Vector2 point = bounds.min;
-    Vector2 size = bounds.size/1000;
-    bool result = Physics2D.OverlapBox(point,new Vector2(0.01f,0.01f), 0.2f, 1 << 8);
+    bool result = false;
+    int layerMask = 1 << 8;
+
+    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(-Vector2.up), 0.1f, layerMask);
     
+    if (hit)
+    {    
+        result = true;
+    }
+
     return result;
     }
 
@@ -70,7 +75,7 @@ public class Character : MonoBehaviour
     Bounds bounds = this.collider.bounds;
     Vector2 point = bounds.center;
     Vector2 size = bounds.size;
-    bool result = Physics2D.OverlapBox(point,new Vector2(size.x,size.y-0.2f), 0f, 1 << 8);
+    bool result = Physics2D.OverlapBox(new Vector2(point.x,point.y+0.2f),new Vector2(size.x,size.y-0.4f), 0f, 1 << 8);
     if(!result){
         napWall = direction;
     }else{

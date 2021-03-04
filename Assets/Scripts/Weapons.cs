@@ -11,7 +11,7 @@ public class Weapons : MonoBehaviour
     private Animator myanim;
     private Character character;
     private CharacterController characterController;
-    public int nowActive;
+    public int nowActive = 10;
     private void Awake() {
         myanim = GetComponent<Animator>();
         character = GetComponent<Character>();
@@ -21,12 +21,21 @@ public class Weapons : MonoBehaviour
     public void picupWeapon(int number,int ammoCount){
         disurm();
         nowActive = number;
-        weapons[number].SetActive(true);
-        if(myanim!= null)
-        myanim.SetBool("PicupWeapon",true);
-        character.shootweapons = weapons[number].GetComponent<ShootWeapon>();
-        character.shootweapons.ammoCount = ammoCount;
-        character.shootweapons.photonView = characterController.photonView;
+        if(number == 10){
+            if(myanim!= null)
+                myanim.SetBool("PicupWeapon",false);
+            character.shootweapons = null;
+        }else
+        {
+            weapons[number].SetActive(true);
+            if(myanim!= null){
+                myanim.SetBool("PicupWeapon",true);
+                myanim.SetFloat("WeaponAnims",number);
+            }
+            character.shootweapons = weapons[number].GetComponent<ShootWeapon>();
+            character.shootweapons.ammoCount = ammoCount;
+            character.shootweapons.photonView = characterController.photonView;
+        }
     }
 
     public void disurm(){
@@ -35,7 +44,7 @@ public class Weapons : MonoBehaviour
         if(myanim != null)
             myanim.SetBool("PicupWeapon",false);
         milk.SetActive(false);
-        nowActive = 0;
+        nowActive = 10;
     }
 
     public void ShowMilk(){
@@ -49,7 +58,10 @@ public class Weapons : MonoBehaviour
     }
 
     public int GetAmmoCount(){
-        return weapons[nowActive].GetComponent<ShootWeapon>().ammoCount;
+        if(nowActive != 10)
+            return weapons[nowActive].GetComponent<ShootWeapon>().ammoCount;
+        else
+            return 0;
     }
 
     public void DrinkMilk(){

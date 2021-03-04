@@ -18,14 +18,28 @@ public class Bullet : MonoBehaviour
         Object.Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    /*private void OnTriggerEnter2D(Collider2D other) {
+        Hit(other);
+    }
+*/
+    private void FixedUpdate() {
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 0.2f);
+        if (hit){
+            Hit(hit.collider);
+        }
+
+    }
+
+    public void Hit(Collider2D other){
+
         Helth_settings helth = other.GetComponent<Helth_settings>();
         if(helth!=null){
             helth.helth -= damage;
             helth.lasthitMePlayer = owner;
-            Object.Destroy(this.gameObject);
         } 
-        
+        Object.Destroy(this.gameObject);
+
     }
 
 }

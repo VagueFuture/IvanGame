@@ -10,7 +10,6 @@ public class ShootWeapon : MonoBehaviour
     public float shootSpeed;
     [Range(0, 20)]
     public float shootspeedDelay;
-    public bool riful,shootgun;
     public int ammoCount;
     public float dmg = 0;
     public PhotonView photonView;
@@ -33,7 +32,7 @@ public class ShootWeapon : MonoBehaviour
 
     public void Fire(string owner){
         int xVelocity = 1;
-        if(transform.lossyScale.x < 0)
+        if(transform.lossyScale.x > 0)
             xVelocity = -1;
         else
             xVelocity = 1;

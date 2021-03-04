@@ -85,16 +85,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867682874646435462}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99057865, w: -0.13694496}
-  m_LocalPosition: {x: -12.85502, y: 3.2454507, z: 0}
-  m_LocalScale: {x: 0.51361465, y: 0.51361465, z: 0.51361424}
+  m_LocalRotation: {x: 0.9942346, y: 0.107227154, z: 0, w: 0}
+  m_LocalPosition: {x: 1.056, y: 0.46, z: 0}
+  m_LocalScale: {x: 1.1641, y: 1.1641, z: 1.1641}
   m_Children:
   - {fileID: 7686779744015275755}
   - {fileID: 652034081813690318}
   - {fileID: 1747476859444105648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 192.37599}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 167.68901}
 --- !u!212 &513400852734743705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -164,10 +164,9 @@ MonoBehaviour:
   - {fileID: 1747476859444105648}
   shootSpeed: 40
   shootspeedDelay: 2
-  riful: 0
-  shootgun: 0
   ammoCount: 0
   dmg: 35
+  photonView: {fileID: 0}
   network: 1
 --- !u!1 &9090997303015563012
 GameObject:
