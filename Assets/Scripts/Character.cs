@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     public Animator myanim;
     public ShootWeapon shootweapons;
     private bool direction = right,napWall;
-    private bool onMoving, onMakeJump;
+    private bool onMoving, onMakeJump, isJumping;
     public float buffSpeed = 0;
 
     [Range(0, 10)]
@@ -62,27 +62,27 @@ public class Character : MonoBehaviour
     int layerMask = 1 << 8;
 
     RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(-Vector2.up), 0.1f, layerMask);
-    
+    isJumping = false;
     if (hit)
     {    
         result = true;
+        isJumping = true;
     }
 
     return result;
     }
 
     private bool CheckWall() {
-    Bounds bounds = this.collider.bounds;
-    Vector2 point = bounds.center;
-    Vector2 size = bounds.size;
-    bool result = Physics2D.OverlapBox(new Vector2(point.x,point.y+0.2f),new Vector2(size.x,size.y-0.4f), 0f, 1 << 8);
+        Bounds bounds = this.collider.bounds;
+        Vector2 point = bounds.center;
+        Vector2 size = bounds.size;
+        bool result = Physics2D.OverlapBox( point, size, 0f, 1 << 8);
     if(!result){
         napWall = direction;
     }else{
         if(napWall != direction)
             result = false;
     }
-    
     return result;
     }
 
@@ -95,7 +95,7 @@ public class Character : MonoBehaviour
     }
 
     private void FixedUpdate() {
-    if (this.onMoving && !CheckWall()) {  
+    if (this.onMoving) {  
         float xVelocity, yVelocity;
 
         if (this.direction) xVelocity = 1f;
@@ -103,7 +103,9 @@ public class Character : MonoBehaviour
 
         transform.localScale = new Vector2(transform.localScale.y*-xVelocity,transform.localScale.y);
         float speed = this.moveSpeed * Time.fixedDeltaTime * 100f;
+        
         xVelocity = xVelocity * (speed + buffSpeed);
+        
         yVelocity = this.body.velocity.y;
 
         this.body.velocity = new Vector2(xVelocity, yVelocity);
